@@ -1,0 +1,246 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+
+</head>
+
+<body>
+  <div class="q1">
+    <p>Q:宣告變數的方法、型別有哪些?</p>
+    <ul>
+      <li>方法</li>
+      <li>var 宣告一個可隨意更改其內容的變數</li>
+      <li>let 宣告一個可隨意更改其內容的區塊區域變數</li>
+      <li>const 宣告一個只可讀取的不可變常數</li>
+      <li>型別(可用 typeof 來檢測)</li>
+      <li>number 數字，例如：12345</li>
+      <li>string 字串，例如：'Hello World'</li>
+      <li>boolean 布林，例如：true、false</li>
+      <li>null</li>
+      <li>undefined</li>
+      <li>object 物件，例如：{ name: 'Jack' }</li>
+    </ul>
+  </div>
+  
+    <div class="q2">
+      <p>Q:何為let/const跟var的差別為何?</p>
+      <ul>
+        <li>作用域：</li>
+        <li>let 、 const 的作用域為區塊作用域</li>
+        <li>var 的作用域為函式作用域</li>
+        <li>重複宣告：</li>
+        <li>let 、 const 不能重複宣告</li>
+        <li>var 可以重複宣告</li>
+        <li>重新賦予原始型別的值：</li>
+        <li>const 不能重新賦予原始型別的值</li>
+        <li>var 、let 可以重新賦予原始型別的值</li>
+      </ul>
+    </div>
+    <div class="q3">
+      <p>Q:何為scope/closure/hoisting/prototype/DOM?</p>
+      <ul>
+        <li>Scope 作用域意思就是，變數在程式中可以被存取的範圍</li>
+        <li>Closure 是指變數的生命週期只存在於該 Function 中，一旦離開了 Function，該變數就會被回收而不可再利用，且必須在 Function 內事先宣告</li>
+        <li>Hoisting 是一種把宣告提升到其所在區域內頂端的行為，意即程式會將 Function 中全部需要宣告的 Local Variable，提升到 Function 的第一行來執行，但不包含初始值設定</li>
+        <li>DOM 把一份 HTML 文件內的各個標籤，包括文字、圖片等等都定義成物件，而這些物件最終會形成一個樹狀結構(DOM tree)</li>
+      </ul>
+    </div>
+    <div class="q4">
+      <p>Q:請描述 cookies, sessionStorage 和 localStorage 的不同?</p>
+      <ul>
+        <li><img src="./img/01.png" alt=""></li>
+        
+      </ul>
+    </div>
+    <div class="q5">
+      <p>Q:描述下列之間的不同script, script async & script defer?</p>
+      <ul>
+        <li>script 整個網頁繪製會停下，等 js 下載完並執行完，網頁繪製才繼續</li>
+        <li>defer(延遲) 網頁繪製不會停下， js 在背景下載，待 DOMContentLoaded 再執行js</li>
+        <li>async(非同步) 網頁繪製不會停下， js 在背景下載;等js 下載完畢，網頁繪製停下，執行 js ;等 js 執行完畢，網頁繪製繼續</li>
+    
+      </ul>
+    </div>
+    <div class="q6">
+      <p>Q:為什麼把 CSS link 放在 head 之間，與將 JS script 放在 body  之前是個較好的主意？有什麼例外情形嗎？</p>
+      <ul>
+        <li>CSS</li>
+        <li>link 放在 head 之間可讓頁面逐步呈現，放底部可能讓頁面空白</li>
+        <li>JS</li>
+        <li>對於呼叫執行的，我們最好放在head裡，直接宣告或者引用外部檔案（head）</li>
+        <li>對於即時執行的，我們在需要js執行的地方宣告或者引用外部檔案（body）</li>
+        <li>建議在body的底部引入，保證html完成</li>
+        <li>例外情形</li>
+        <li>當腳本包含document.write(),可使用defer属性放在head中</li>
+      </ul>
+    </div>
+    <div class="q7">
+      <p>Q:嘗試寫出一段包含label + input的code</p>
+      <ul>
+        <li>
+            <label for="q7">demo</label>
+            <input type="text" id="q7">
+        </li>
+      </ul>
+    </div>
+    <div class="q8">
+      <p>Q:PWA是什麼</p>
+      <ul>
+        <li>徹底改善用戶體驗</li>
+        <li>Progressive 漸進式，提供每一位用戶做基本的瀏覽，若支援環境、可以提供更強大的功能</li>
+        <li>Responsive 響應式的用戶介面</li>
+        <li>Connectivity independent 不依賴網路連接，透過 service workers 可以在低頻寬甚至是離線的環境下瀏覽網站</li>
+        <li>App-like 讓網站可以具有像 APP 般的瀏覽速度等優點，提供更佳的用戶體驗</li>
+        <li>Fresh 藉由 service worker 自動更新網站內容</li>
+        <li>Safe 通過 HTTPS 來提供服務，確保資料安全性</li>
+        <li>Discoverable 像是推播通知等特性，吸引使用者注意、主動和使用者互動，提升用戶回流率</li>
+        <li>Installable 可以藉由 Add To Home，如同 App，會新增一個 icon，可以直接將網站加到手機桌面上做切換使用，不需要再透過 App Store 下載安裝</li>
+        <li>Linkable 可以將網站、透過 URL 相互傳遞分享</li>
+      </ul>
+    </div>
+  <div class="q9">
+    <p>Q:reset/normalize</p>
+    <ul>
+      <li>reset</li>
+      <li>優點是統整、重置了各個瀏覽器的樣式設定</li>
+      <li>缺點是必須全部重新做設定，比較沒有彈性</li>
+      <li>normalize</li>
+      <li>保留有用的瀏覽器默認設置，而不是將其刪除</li>
+    </ul>
+  </div>
+  <div class="q10">
+    <p>Q:嘗試列舉出三種以上排版方法，以及置中方法</p>
+    <ul>
+      <li>Flex</li>
+      <li>float</li>
+      <li>grid</li>
+      <li><a href="http://csscoke.com/2018/08/21/css-vertical-align/">置中方法</a></li>
+    </ul>
+  </div>
+  <div class="q11">
+    <p>Q:何為預處理器</p>
+    <ul>
+      <li>Sass（SCSS）, LESS, Stylus, Turbine, Swithch CSS, CSS Cacheer, DT CSS</li>
+    </ul>
+  </div>
+  <div class="q12">
+    <p>Q:gulp/grunt/webpack為何物？</p>
+    <ul>
+      <li>Grunt</li>
+      <li>JavaScript的自動化工具</li>
+      <li>編譯處理,語法檢查,合併及壓縮文件（js、css）</li>
+      <li>gulp</li>
+      <li>基於node 實現Web 前端自動化開發的工具</li>
+      <li>Webpack</li>
+      <li>打包工具</li>
+    </ul>
+  </div>
+  <div class="q13">
+    <p>Q:Box model</p>
+    <ul>
+      <li><img src="./img/css-box-model.jpg" alt=""></li>
+    </ul>
+  </div>
+  <div class="q14">
+    <p>Q:pt/px/em/rem差別</p>
+    <ul>
+      <li>pt單位名稱為點（Point），絕對長度單位，常用於印刷行業</li>
+      <li>px單位名稱為像素，相對長度單位，像素px是相對於顯示器屏幕解析度而言的</li>
+      <li>em單位名稱為相對長度單位。沒有一個固定數值，相對於當前對象內文本的字體尺寸。如當前對行內文本的字體尺寸未被人為設置，則相對於瀏覽器的預設字體尺寸</li>
+      <li>rem是CSS3新增的一個相對單位（root em，根em）， rem是相對單位，是相對HTML根元素。</li>
+    </ul>
+  </div>
+  <div class="q15">
+    <p>Q:library/framework差別</p>
+    <ul>
+      <li>例:Vue就是一種Framework(框架)，jQuery就是一種Library(函式庫)</li>
+      <li>Framework 呼叫 code , code 呼叫 library</li>
+    </ul>
+  </div>
+  <div class="q15">
+    <p>Q:null、undefined和 undeclared變數之間有什麼差異？你如何檢查？</p>
+    <ul>
+      <li>null 等於變數是「沒有」的值，本身等於有值了，這個值就叫「沒有」</li>
+      <li>undefined 宣告但尚未給予值</li>
+      <li>undeclared 是還沒有經過宣告的變數</li>
+    </ul>
+  </div>
+  <div class="q16">
+    <p>Q:什麼是同步非同步</p>
+    <ul>
+      <li>同步一次只做一件事，不會有兩個任務同時進行</li>
+      <li>非同步就是每個任務各做各的，不用等其他任務完成，再進行下一個任務</li>
+    </ul>
+  </div>
+  <div class="q17">
+    <p>Q:什麼是jsonp</p>
+    <ul>
+      <li>JQuery提供的跨域解決方案</li>
+    </ul>
+    <div class="q18">
+      <p>Q:== 和 === 有什麼不同？</p>
+      <ul>
+        <li>=== 嚴格的定義，==採取較為寬鬆的定義，它允許型別轉換</li>
+      </ul>
+    </div>
+  </div>
+  <div class="q19">
+    <p>Q:解釋什麼是 single page app，並怎麼讓它對 SEO 更友善</p>
+    <ul>
+      <li>不需跳轉頁面就可以達到基本的建立、讀取、修改、刪除資料功能</li>
+      <li>spa SEO優化方案</li>
+      <li>SSR服務端渲染 將組件或頁面通過服務器生成html，再返回給瀏覽器，如nuxt.js，next.js</li>
+    </ul>
+  </div>
+  <div class="q20">
+    <p>Q:Promises 之於 callbacks 的優劣？</p>
+    <ul>
+      <li>缺點 處於pending狀態時，無法得知目前進展到哪一個階段（剛剛開始還是即將完成）</li>
+      <li>優點 好維護和解決回調地獄（Callback Hell）</li>
+    </ul>
+  </div>
+  <div class="q21">
+    <p>Q:By value vs by reference</p>
+    <ul>
+      <li><a href="https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html">觀念</a></li>
+    </ul>
+  </div>
+  <div class="q22">
+    <p>Q:load vs. DOMContentLoaded</p>
+    <ul>
+      <li>load事件是在完成js 、css樣式表和image等資源加載完成時被觸發</li>
+      <li>DOMContentLoaded是在HTML文檔的加載並解析完成時觸發，而不用等待CSS樣式表和 image的加載完成</li>
+    </ul>
+  </div>
+  <div class="q23">
+    <p>Q:Ajax, xhr 範例
+      <ul>
+        <li><a href="https://ithelp.ithome.com.tw/articles/10222165">範例講解</a></li>
+      </ul>
+  </div>
+  <div class="q24">
+    <p>Q:export / Import</p>
+    <ul>
+      <li>import後面的from指定模組檔案的位置，可以是相對路徑，也可以是絕對路徑，.js字尾可以省略</li>
+      <li>export 命名匯出需要export 名字和import名字嚴格一致</li>
+      <li>而export default命令，為模組指定預設輸出，在import 的時候可以隨意命名名字。一個模組只能有一個預設輸出，也就是說 export default
+      一個模組只能用一次</li>
+    </ul>
+  </div>
+  <div class="q25">
+    <p>Q:git-flow/gitlab-flow</p>
+    <ul>
+      <li>Git-flow</li>
+      <li>優點 清晰可控</li>
+      <li>缺點 較為複雜，需要同時維護 master 分支與 delevop 分支兩個長期分支</li>
+      <li>gitlab-flow</li>
+      <li>Git flow 和 Github flow 的综合，只認存在一個主要分支 Master 分支，他是其他所有分支的「上游」</li>
+      <li>「版本發佈」- 每當有一個穩定的版本，就要從 master 分支拉出一個分支。只有修補 Bug 時，才允許將代碼合併到這些分支</li>
+    </ul>
+  </div>
+</body>
+
+</html>
